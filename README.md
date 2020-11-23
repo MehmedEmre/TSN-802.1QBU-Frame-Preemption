@@ -130,7 +130,8 @@ Kurulum aşamaları başarılı bir şekilde tamamlandıktan ve proje yukarıda 
 • Simülasyon için açılmış olan pencerenin, sağ üst kısmındaki çarpıya tıklanarak simülasyon ekranından çıkılabilir veya kısayol olarak klavyeden "ALT+F4" yapılarak simülasyon ekranından çıkılabilir.
 
 ----------------------------------------------------------------------------------------------
-####### İpucu
+
+###### İpucu
 
 • Açılan herhangi bir .ned dosyasının altında bulunan "source" kısmına tıklanarak ağ ya da modüllerin kaynak kodu incelenebilir ve değiştirilebilir.
 
@@ -140,13 +141,15 @@ Kurulum aşamaları başarılı bir şekilde tamamlandıktan ve proje yukarıda 
   Derleyici tarafından hiç bir syntax hatası belirtilmemişse OMNeT++'ı kapatıp yeniden açmak işe yarayabilir.
 
 ----------------------------------------------------------------------------------------------
-######## Geliştiriciler
+
+###### Geliştiriciler
 
 
 ***Mehmed Emre AKDİN*** --- ***Emre KURŞUN***
 
 ----------------------------------------------------------------------------------------------
-######### Teşekkürler
+
+###### Teşekkürler
 
 - Projede büyük katkısı olan Dr. Öğr. Üyesi Selçuk CEVHER'e
 - Kodu kullanan ve inceleyen herkese
