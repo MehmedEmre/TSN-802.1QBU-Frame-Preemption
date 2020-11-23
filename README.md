@@ -134,7 +134,7 @@ Kurulum aşamaları başarılı bir şekilde tamamlandıktan ve proje yukarıda 
 ----------------------------------------------------------------------------------------------
 ######## Geliştiriciler
 
-***Emre KURŞUN**** --- ***Mehmed Emre AKDİN***
+***Mehmed Emre AKDİN*** --- ***Emre KURŞUN****
 ----------------------------------------------------------------------------------------------
 ######### Teşekkürler
 
