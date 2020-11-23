@@ -1,0 +1,269 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1286 rid General-0-20200630-23:44:39-7164 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t Network n Network cm 1
+MS id 1 d bgb=317.706,152.0255
+MC id 2 c omnetpp::cModule t Switch pid 1 n switch1 cm 1
+GC m 2 g 0 n switchIn1 o 0
+GC m 2 g 2 n switchIn2 o 0
+GC m 2 g 4 n switchIn3 o 0
+GC m 2 g 7 n switchOut1 o 1
+MS id 2 d i=old/switch2;p=110.150215,72.82659;bgb=419.20804,197.08696
+MC id 7 c ts t ts pid 2 n TransmissionSelection
+GC m 7 g 0 n tsBestEffortIn o 0
+GC m 7 g 3 n tsBestEffortOut o 1
+GC m 7 g 4 n tsExpressIn o 0
+GC m 7 g 7 n tsExpressOut o 1
+GC m 7 g 8 n tsPMacIn o 0
+GC m 7 g 11 n tsPMacOut o 1
+GC m 7 g 12 n tsEMacIn o 0
+GC m 7 g 15 n tsEMacOut o 1
+MS id 7 d p=176.60448,104.688225;i=block/rightarrow;is=l
+MC id 8 c FIFO1 t FIFO1 pid 2 n BestEffortFifo
+GC m 8 g 0 n fifoInSwitch1 o 0
+GC m 8 g 2 n fifoInTs1 o 0
+GC m 8 g 5 n fifoOut1 o 1
+MS id 8 d p=66.90943,67.36459;i=block/queue;q=queue
+MC id 9 c FIFO2 t FIFO2 pid 2 n ExpressFifo
+GC m 9 g 0 n fifoInSwitch2 o 0
+GC m 9 g 2 n fifoInTs2 o 0
+GC m 9 g 5 n fifoOut2 o 1
+MS id 9 d p=66.90943,128.35686;i=block/queue;q=queue
+MC id 10 c omnetpp::cModule t macMergeSublayer pid 2 n MACms cm 1
+GC m 10 g 1 n mmsOutput1 o 1
+GC m 10 g 2 n mmsInput1 o 0
+GC m 10 g 5 n mmsOutput2 o 1
+GC m 10 g 6 n mmsInput2 o 0
+GC m 10 g 9 n mmsOutput3 o 1
+GC m 10 g 10 n mmsInput3 o 0
+MS id 10 d i=block/mac;p=357.76062,96.49523;bgb=284,273
+MC id 13 c receiveProcessing t receiveProcessing pid 10 n channel_pMAC
+GC m 13 g 0 n receiveIn o 0
+GC m 13 g 3 n receiveOut o 1
+MS id 13 d p=144.73848,128.49232;is=l
+MC id 14 c transmitBlock t transmitBlock pid 10 n transmitAndReceive
+GC m 14 g 0 n transmitIn1 o 0
+GC m 14 g 2 n transmitIn2 o 0
+GC m 14 g 4 n transmitIn3 o 0
+GC m 14 g 7 n transmitOut1 o 1
+GC m 14 g 9 n transmitOut2 o 1
+MS id 14 d p=220.80002,175.01541
+MC id 15 c expressFilter t expressFilter pid 10 n channel_eMAC
+GC m 15 g 0 n expressIn o 0
+GC m 15 g 3 n expressOut1 o 1
+GC m 15 g 5 n expressOut2 o 1
+MS id 15 d p=53.169235,175.75386
+MC id 11 c omnetpp::cModule t pMAC pid 2 n pMAC cm 1
+GC m 11 g 0 n pMacIn1 o 0
+GC m 11 g 3 n pMacOut1 o 1
+GC m 11 g 4 n pMacIn2 o 0
+GC m 11 g 7 n pMacOut2 o 1
+MS id 11 d i=block/mac;p=291.30637,36.86846;bgb=281,209
+MC id 16 c Buffer t Buffer pid 11 n reassemble
+GC m 16 g 0 n bufferIn1 o 0
+GC m 16 g 3 n bufferOut1 o 1
+MS id 16 d p=204.36961,82.38508;i=block/buffer
+MC id 17 c Buffer t Buffer pid 11 n buffer2
+GC m 17 g 0 n bufferIn1 o 0
+GC m 17 g 3 n bufferOut1 o 1
+MS id 17 d p=85.57124,118.34321;i=block/buffer
+MC id 12 c emac t emac pid 2 n eMAC
+GC m 12 g 0 n eMacIn1 o 0
+GC m 12 g 3 n eMacOut1 o 1
+GC m 12 g 4 n eMacIn2 o 0
+GC m 12 g 7 n eMacOut2 o 1
+MS id 12 d p=291.76154,155.66684;i=block/mac
+MC id 3 c omnetpp::cModule t Switch pid 1 n switch2 cm 1
+GC m 3 g 0 n switchIn1 o 0
+GC m 3 g 2 n switchIn2 o 0
+GC m 3 g 4 n switchIn3 o 0
+GC m 3 g 7 n switchOut1 o 1
+MS id 3 d i=old/switch2;p=200.27312,72.82659;bgb=419.20804,197.08696
+MC id 18 c ts t ts pid 3 n TransmissionSelection
+GC m 18 g 0 n tsBestEffortIn o 0
+GC m 18 g 3 n tsBestEffortOut o 1
+GC m 18 g 4 n tsExpressIn o 0
+GC m 18 g 7 n tsExpressOut o 1
+GC m 18 g 8 n tsPMacIn o 0
+GC m 18 g 11 n tsPMacOut o 1
+GC m 18 g 12 n tsEMacIn o 0
+GC m 18 g 15 n tsEMacOut o 1
+MS id 18 d p=176.60448,104.688225;i=block/rightarrow;is=l
+MC id 19 c FIFO1 t FIFO1 pid 3 n BestEffortFifo
+GC m 19 g 0 n fifoInSwitch1 o 0
+GC m 19 g 2 n fifoInTs1 o 0
+GC m 19 g 5 n fifoOut1 o 1
+MS id 19 d p=66.90943,67.36459;i=block/queue;q=queue
+MC id 20 c FIFO2 t FIFO2 pid 3 n ExpressFifo
+GC m 20 g 0 n fifoInSwitch2 o 0
+GC m 20 g 2 n fifoInTs2 o 0
+GC m 20 g 5 n fifoOut2 o 1
+MS id 20 d p=66.90943,128.35686;i=block/queue;q=queue
+MC id 21 c omnetpp::cModule t macMergeSublayer pid 3 n MACms cm 1
+GC m 21 g 1 n mmsOutput1 o 1
+GC m 21 g 2 n mmsInput1 o 0
+GC m 21 g 5 n mmsOutput2 o 1
+GC m 21 g 6 n mmsInput2 o 0
+GC m 21 g 9 n mmsOutput3 o 1
+GC m 21 g 10 n mmsInput3 o 0
+MS id 21 d i=block/mac;p=357.76062,96.49523;bgb=284,273
+MC id 24 c receiveProcessing t receiveProcessing pid 21 n channel_pMAC
+GC m 24 g 0 n receiveIn o 0
+GC m 24 g 3 n receiveOut o 1
+MS id 24 d p=144.73848,128.49232;is=l
+MC id 25 c transmitBlock t transmitBlock pid 21 n transmitAndReceive
+GC m 25 g 0 n transmitIn1 o 0
+GC m 25 g 2 n transmitIn2 o 0
+GC m 25 g 4 n transmitIn3 o 0
+GC m 25 g 7 n transmitOut1 o 1
+GC m 25 g 9 n transmitOut2 o 1
+MS id 25 d p=220.80002,175.01541
+MC id 26 c expressFilter t expressFilter pid 21 n channel_eMAC
+GC m 26 g 0 n expressIn o 0
+GC m 26 g 3 n expressOut1 o 1
+GC m 26 g 5 n expressOut2 o 1
+MS id 26 d p=53.169235,175.75386
+MC id 22 c omnetpp::cModule t pMAC pid 3 n pMAC cm 1
+GC m 22 g 0 n pMacIn1 o 0
+GC m 22 g 3 n pMacOut1 o 1
+GC m 22 g 4 n pMacIn2 o 0
+GC m 22 g 7 n pMacOut2 o 1
+MS id 22 d i=block/mac;p=291.30637,36.86846;bgb=281,209
+MC id 27 c Buffer t Buffer pid 22 n reassemble
+GC m 27 g 0 n bufferIn1 o 0
+GC m 27 g 3 n bufferOut1 o 1
+MS id 27 d p=204.36961,82.38508;i=block/buffer
+MC id 28 c Buffer t Buffer pid 22 n buffer2
+GC m 28 g 0 n bufferIn1 o 0
+GC m 28 g 3 n bufferOut1 o 1
+MS id 28 d p=85.57124,118.34321;i=block/buffer
+MC id 23 c emac t emac pid 3 n eMAC
+GC m 23 g 0 n eMacIn1 o 0
+GC m 23 g 3 n eMacOut1 o 1
+GC m 23 g 4 n eMacIn2 o 0
+GC m 23 g 7 n eMacOut2 o 1
+MS id 23 d p=291.76154,155.66684;i=block/mac
+MC id 4 c Generator t Generator pid 1 n workstation
+GC m 4 g 1 n generatorOut o 1
+MS id 4 d p=24.578974,14.565318;i=device/pc4
+MC id 5 c Generator t Generator pid 1 n ExpressGenerator
+GC m 5 g 1 n generatorOut o 1
+MS id 5 d p=24.578974,129.72237;i=device/cpu
+MC id 6 c other t other pid 1 n Other
+GC m 6 g 1 n otherOut1 o 1
+GC m 6 g 3 n otherOut2 o 1
+MS id 6 d p=278.10654,73.28175;i=block/bucket
+CC sm 2 sg 0 dm 8 dg 0
+CC sm 2 sg 2 dm 9 dg 0
+CC sm 2 sg 4 dm 10 dg 10
+CC sm 2 sg 7 dm 3 dg 4
+CC sm 7 sg 3 dm 8 dg 2
+CC sm 7 sg 7 dm 9 dg 2
+CC sm 7 sg 11 dm 11 dg 0
+CC sm 7 sg 15 dm 12 dg 0
+CC sm 8 sg 5 dm 7 dg 0
+CC sm 9 sg 5 dm 7 dg 4
+CC sm 10 sg 1 dm 11 dg 4
+CC sm 10 sg 2 dm 14 dg 0
+CC sm 10 sg 5 dm 12 dg 4
+CC sm 10 sg 6 dm 14 dg 2
+CC sm 10 sg 9 dm 2 dg 7
+CC sm 10 sg 10 dm 14 dg 4
+CC sm 13 sg 3 dm 10 dg 1
+CC sm 14 sg 7 dm 15 dg 0
+CC sm 14 sg 9 dm 10 dg 9
+CC sm 15 sg 3 dm 13 dg 0
+CC sm 15 sg 5 dm 10 dg 5
+CC sm 11 sg 0 dm 17 dg 0
+CC sm 11 sg 3 dm 7 dg 8
+CC sm 11 sg 4 dm 16 dg 0
+CC sm 11 sg 7 dm 10 dg 2
+CC sm 16 sg 3 dm 11 dg 3
+CC sm 17 sg 3 dm 11 dg 7
+CC sm 12 sg 3 dm 7 dg 12
+CC sm 12 sg 7 dm 10 dg 6
+CC sm 3 sg 0 dm 19 dg 0
+CC sm 3 sg 2 dm 20 dg 0
+CC sm 3 sg 4 dm 21 dg 10
+CC sm 3 sg 7 dm 2 dg 4
+CC sm 18 sg 3 dm 19 dg 2
+CC sm 18 sg 7 dm 20 dg 2
+CC sm 18 sg 11 dm 22 dg 0
+CC sm 18 sg 15 dm 23 dg 0
+CC sm 19 sg 5 dm 18 dg 0
+CC sm 20 sg 5 dm 18 dg 4
+CC sm 21 sg 1 dm 22 dg 4
+CC sm 21 sg 2 dm 25 dg 0
+CC sm 21 sg 5 dm 23 dg 4
+CC sm 21 sg 6 dm 25 dg 2
+CC sm 21 sg 9 dm 3 dg 7
+CC sm 21 sg 10 dm 25 dg 4
+CC sm 24 sg 3 dm 21 dg 1
+CC sm 25 sg 7 dm 26 dg 0
+CC sm 25 sg 9 dm 21 dg 9
+CC sm 26 sg 3 dm 24 dg 0
+CC sm 26 sg 5 dm 21 dg 5
+CC sm 22 sg 0 dm 28 dg 0
+CC sm 22 sg 3 dm 18 dg 8
+CC sm 22 sg 4 dm 27 dg 0
+CC sm 22 sg 7 dm 21 dg 2
+CC sm 27 sg 3 dm 22 dg 3
+CC sm 28 sg 3 dm 22 dg 7
+CC sm 23 sg 3 dm 18 dg 12
+CC sm 23 sg 7 dm 21 dg 6
+CC sm 4 sg 1 dm 2 dg 0
+CC sm 5 sg 1 dm 2 dg 2
+CC sm 6 sg 1 dm 3 dg 0
+CC sm 6 sg 3 dm 3 dg 2
+
+E # 66 t 5 m 4 ce -1 msg -1
+CM id 2 tid 2 eid 2 etid 2 c mPacket n "Preemptable Packet" pe -1
+BS id 2 tid 2 eid 2 etid 2 c mPacket n "Preemptable Packet" pe 66
+ES t 7
+
+E # 80 t 6 m 5 ce -1 msg -1
+CM id 3 tid 3 eid 3 etid 3 c mPacket n "Preemptable Packet" pe -1
+BS id 3 tid 3 eid 3 etid 3 c mPacket n "Preemptable Packet" pe 80
+ES t 11
+
+E # 81 t 6 m 7 ce -1 msg -1
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n Tick pe -1
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n Tick pe 81
+ES t 8
+
+E # 115 t 6.5 m 17 ce -1 msg -1
+CM id 51 tid 51 eid 51 etid 51 c mPacket n "Preemptable Packet" pe -1
+BS id 51 tid 51 eid 51 etid 51 c mPacket n "Preemptable Packet" pe 115
+SH sm 17 sg 3
+ES t 6.5
+CM id 18 tid 18 eid 18 etid 18 c mPacket n "Preemptable Packet" pe -1
+BS id 18 tid 18 eid 18 etid 18 c mPacket n "Preemptable Packet" pe 115
+ES t 7
+
+E # 116 t 6.5 m 17 ce -1 msg -1
+CM id 52 tid 52 eid 52 etid 52 c mPacket n "Preemptable Packet" pe -1
+BS id 52 tid 52 eid 52 etid 52 c mPacket n "Preemptable Packet" pe 116
+SH sm 17 sg 3
+ES t 6.5
+CM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n Continue! pe -1
+BS id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n Continue! pe 116
+ES t 7
+
+E # 117 t 6.5 m 17 ce -1 msg -1
+CM id 53 tid 53 eid 53 etid 53 c mPacket n "Preemptable Packet" pe -1
+BS id 53 tid 53 eid 53 etid 53 c mPacket n "Preemptable Packet" pe 117
+SH sm 17 sg 3
+ES t 6.5
+CM id 41 tid 41 eid 41 etid 41 c mPacket n "Preemptable Packet" pe -1
+BS id 41 tid 41 eid 41 etid 41 c mPacket n "Preemptable Packet" pe 117
+ES t 7
+
+E # 118 t 6.5 m 14 ce 115 msg 51
+BS id 51 tid 51 eid 51 etid 51 c mPacket n "Preemptable Packet" pe 118
+SH sm 14 sg 9
+SH sm 10 sg 9
+SH sm 2 sg 7
+SH sm 3 sg 4
+SH sm 21 sg 10
+ES t 6.5
+CL id 51 tid 51 eid 51 etid 51 c mPacket n "Preemptable Packet" pe 118 cid 58
