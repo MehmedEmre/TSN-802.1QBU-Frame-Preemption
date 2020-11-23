@@ -1,11 +1,13 @@
 # Proje Başlığı
 
 Gerçek Zamanlı Haberleşme İçin IEEE TSN 802.1Qbu Frame Preemption Protokolünün OMNeT++’da Simülasyonu
+
 ----------------------------------------------------------------------------------------------
 ## Açıklama
 
 Bu çalışmada IEEE 802.1 Time Sensitive Network’un (TSN) bir protokolü olan 802.1Qbu Frame Preemption’ın ve IEEE 802.3 Standard Ethernet’in 
 bir protokolü olan 802.3Br Interspersing Express Traffic'in çalışma ilkeleri üzerine kurulu modelin OMNeT++’da simülasyonu gerçeklenmektedir.
+
 ----------------------------------------------------------------------------------------------
 ### Gereksinimler
 
@@ -18,7 +20,9 @@ bir protokolü olan 802.3Br Interspersing Express Traffic'in çalışma ilkeleri
 OMNeT++ için:
 
 • OMNeT++ 5.5.1 ve yukarısı
+
 ----------------------------------------------------------------------------------------------
+
 #### Kurulum Ve Başlangıç Ayarları
 
 **** Windows için ****
@@ -52,6 +56,7 @@ File --> Existing Projects into Workspace(next denilir)---> Browse(proje yolu se
 • IDE'yi başlatma:
 
 $ omnetpp
+
 ---------------------------------------------------------------------------------------------------------
 **** Linux için ****
 
@@ -91,11 +96,13 @@ File --> Existing Projects into Workspace(next denilir)---> Browse(proje yolu se
 • IDE'yi başlatma:
 
 $ omnetpp
+
 ----------------------------------------------------------------------------------------------
 ##### Versiyon
 
 - OMNeT++ 5.5.1
 ----------------------------------------------------------------------------------------------
+
 ###### Projenin Çalıştırılması
 
 Kurulum aşamaları başarılı bir şekilde tamamlandıktan ve proje yukarıda anlatıldığı gibi açıldıktan sonra:
@@ -121,6 +128,7 @@ Kurulum aşamaları başarılı bir şekilde tamamlandıktan ve proje yukarıda 
 • Simülasyon sırasında gerçekleşen bir takım olaylar "Console" penceresi kısmında yazdırılmaktadır.(Örneğin atılan paketler)
 
 • Simülasyon için açılmış olan pencerenin, sağ üst kısmındaki çarpıya tıklanarak simülasyon ekranından çıkılabilir veya kısayol olarak klavyeden "ALT+F4" yapılarak simülasyon ekranından çıkılabilir.
+
 ----------------------------------------------------------------------------------------------
 ####### İpucu
 
@@ -134,7 +142,9 @@ Kurulum aşamaları başarılı bir şekilde tamamlandıktan ve proje yukarıda 
 ----------------------------------------------------------------------------------------------
 ######## Geliştiriciler
 
+
 ***Mehmed Emre AKDİN*** --- ***Emre KURŞUN****
+
 ----------------------------------------------------------------------------------------------
 ######### Teşekkürler
 
